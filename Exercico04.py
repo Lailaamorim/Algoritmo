@@ -29,3 +29,32 @@
 # salário atual
 # quantidade de dependentes
 # novo salário após o aumento
+
+print("Sistema de Reajuste Salarial")
+
+# Pedido de dados
+nome = input("Digite o nome do funcionário: ")
+salario = float(input("Digite o salário atual: "))
+dependentes = int(input("Digite a quantidade de dependentes: "))
+
+# Verificando a porcentagem de aumento
+# Calculo de porcentagem Ex: (Salario *5/100) (Salario *10/100)
+
+if dependentes == 0:
+    aumento = 0.05 #5%
+elif dependentes >= 1 and dependentes <= 3:
+    aumento = 0.10 #10%
+elif dependentes >= 4 and dependentes <= 5:
+    aumento = 0.15 #15%
+else:
+    aumento = 15 #caso tenha mais de 5 dependentes
+
+# Calculando o novo salário
+novo_salario = salario * (1 + aumento/100)      
+
+# Mostrando resultado
+print("\n--- Resultado ---")
+print(f"Nome do funcionário: {nome}")
+print(f"Salário atual: R$ {salario:.2f}")
+print(f"Quantidade de dependentes: {dependentes}")
+print(f"Novo salário: R$ {novo_salario:.2f}")

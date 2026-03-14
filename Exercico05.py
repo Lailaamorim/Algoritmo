@@ -26,3 +26,21 @@
 # o segundo time é o vencedor.
 
 # O programa também deve mostrar a diferença de gols entre os times.
+
+print("Analisador de Partida de futebol")
+
+time1 = input("Nome do primeiro time: ").upper()
+time2 = input("Nome do segundo time: ").upper()
+
+time1_gols = int(input(f"Quantos gols fez o {time1}?: "))
+time2_gols = int(input(f"Quantos gols fez o {time2}?: "))
+
+print(f"\nResultado da partida: {time1} {time1_gols} X {time2_gols} {time2}")
+
+if time1_gols == time2_gols:
+  print("A PARTIDA TERMINOU EM EMPATE!!")
+elif time1_gols > time2_gols:
+  print(f" O {time1} VENCEU!!")
+else:
+  time2 > time1
+  print(f" O {time2} VENCEU!!")
