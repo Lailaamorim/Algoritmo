@@ -54,21 +54,17 @@ print("-"*30)
 print("CADASTRO DE PESSOAS")
 print("-"*30)
 
-# Contadores para os resultados finais 
-homens = 0
-mulheres_loiras = 0
+# Contadores
 homens_18 = 0
 mulheres_loiras = 0
 
-continuar = "s" # Variavél para controlar o loop
+continuar = "s"
 
 while continuar == "s":
-    sexo = input("Sexo (M/F): ").lower() # .lower() para converter a resposta para minúscula
+
+    sexo = input("Sexo (M/F): ").lower()
     idade = int(input("Idade: "))
 
-     # pergunta se quer continuar
-    continuar = input("Deseja continuar? (s/n): ").lower()
-    
     # Cor da pele
     print("\nCor da pele:")
     print("1 - Branca")
@@ -78,7 +74,7 @@ while continuar == "s":
     print("5 - Indígena")
     pele = int(input("Escolha: "))
 
-    # cor dos olhos
+    # Cor dos olhos
     print("\nCor dos olhos:")
     print("1 - Castanho")
     print("2 - Azul")
@@ -87,7 +83,7 @@ while continuar == "s":
     print("5 - Mel")
     olhos = int(input("Escolha: "))
 
-    # cor do cabelo
+    # Cor do cabelo
     print("\nCor do cabelo:")
     print("1 - Preto")
     print("2 - Castanho")
@@ -95,11 +91,10 @@ while continuar == "s":
     print("4 - Ruivo")
     cabelo = int(input("Escolha: "))
 
-    # tamanho da roupa
-    # upper() transforma em maiúsculo para aceitar p, m, g, gg
+    # Tamanho da roupa
     tamanho = input("\nTamanho de roupa (P/M/G/GG): ").upper()
 
-    # profissão
+    # Profissão
     print("\nProfissão:")
     print("1 - Professor")
     print("2 - Médico")
@@ -113,18 +108,22 @@ while continuar == "s":
     print("10 - Estudante")
     profissao = int(input("Escolha: "))
 
-    # Verificar Homens maiores de 18 anos
-    if sexo in ["m", "masculino"] and idade > 18:
-        homens_18 = homens_18 + 1
+    # Homens maiores de 18
+    if sexo == "m" and idade > 18:
+        homens_18 += 1
 
-    # Verificar Mulheres entre 25 e 30 anos com cabelo loiro
-    if sexo in ["f", "feminino"] and 25 <= idade <= 30  and cabelo == 3:
-        mulheres_loiras = mulheres_loiras + 1    
-        
-        # Pergunta se deseja continuar 
-        continuar = input("\nDeseja continuar cadastrando? (S/N): ").lower()
+    # Mulheres entre 25 e 30 com cabelo loiro
+    if sexo == "f" and 25 <= idade <= 30 and cabelo == 3:
+        mulheres_loiras += 1
 
-        #Resultados finais
-        print("\nRESULTADOS")
-        print(f"Homens coma mais de 18 anos:{homens_18}")
-        print(f"Mulheres entre 25 e 30 anos com cabelo loiro: {mulheres_loiras}")
+    # Pergunta se deseja continuar
+    continuar = input("\nDeseja continuar cadastrando? (s/n): ").lower()
+
+
+# Resultados finais (fora do while)
+print("\n" + "-"*30)
+print("RESULTADOS")
+print("-"*30)
+
+print(f"Homens com mais de 18 anos: {homens_18}")
+print(f"Mulheres entre 25 e 30 anos com cabelo loiro: {mulheres_loiras}")
