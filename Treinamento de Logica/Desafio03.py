@@ -8,3 +8,5 @@
 # Triplo: 27
 # Raiz quadrada: 3.0
 # =========================================
+num = int(input("Digite um número: "))
+print(f"Número: {num}\nDobro: {num*2}\nTriplo: {num*3} \nRaiz {num**0.5}")

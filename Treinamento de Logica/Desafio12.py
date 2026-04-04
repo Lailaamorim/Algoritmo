@@ -1,7 +1,7 @@
 # =========================================
-# DESAFIO 04
-# Peça 3 notas de um aluno e calcule a média.
+# DESAFIO 12
+# Peça uma lista de nomes e mostre o maior nome digitado.
 #
 # SAÍDA ESPERADA:
-# A média do aluno foi 7.5
+# Maior nome: Fernanda
 # =========================================
