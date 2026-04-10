@@ -1,4 +1,4 @@
-#  –Lógica de Programação-
+#  – Lógica de Programação -
 
 ## Eu estou aprendendo Lógica de Programação no Python 🤓
 
